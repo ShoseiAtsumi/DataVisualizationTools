@@ -12,3 +12,10 @@
  *
  */
  @import "bootstrap";
+
+ .background {
+    background-image: image-url('bg01_1080p.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+  }

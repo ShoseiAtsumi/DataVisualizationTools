@@ -1,0 +1,15 @@
+<table class="table table-striped">
+  <caption>List of channels</caption>
+  <thead class="thead-dark">
+    <tr><th>チャンネルID</th><th>チャンネル名</th><th>登録者数</th><th>動画本数</th><th>総再生回数</th></tr>
+  </thead>
+  <% @channels.each do |channel| %>
+	<tr class="bg-light">
+        <td><%= link_to(channel.channel_id, channel_details_show_path(channel_id: channel.channel_id)) %></td>
+        <td><%= channel.channel_name %></td>
+        <td><%= channel.channel_subscribers %></td>
+        <td><%= channel.channel_video_count %></td>
+        <td><%= channel.channel_video_view_count %></td>
+    </tr>  
+  <% end %>
+</table>
